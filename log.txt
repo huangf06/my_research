@@ -1,0 +1,40 @@
+=======================================
+=======================================
+=======================================
+New log starts here.
+=======================================
+=======================================
+=======================================
+----------------
+Start experiment
+Rng seed: 1699305946798008
+Saving experiment configuration.
+Generating initial population.
+Evaluating initial population.
+Starting simulation batch with MuJoCo.
+Finished batch.
+Saving generation.
+Start optimization process.
+Generation 1 / 10.
+Starting simulation batch with MuJoCo.
+Finished batch.
+=======================================
+=======================================
+=======================================
+New log starts here.
+=======================================
+=======================================
+=======================================
+----------------
+Start experiment
+Rng seed: 1699306706090029
+Saving experiment configuration.
+Generating initial population.
+Evaluating initial population.
+Starting simulation batch with MuJoCo.
+Finished batch.
+Saving generation.
+Start optimization process.
+Generation 1 / 10.
+Starting simulation batch with MuJoCo.
+Finished batch.
