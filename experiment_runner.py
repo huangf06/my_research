@@ -181,10 +181,10 @@ class ExperimentRunner:
                 f"Generation {generation.generation_index + 1} / {config.NUM_GENERATIONS}."
             )
 
-            selector = Selector(rng)
+            # selector = Selector(rng)
 
             # Create offspring.
-            parents = selector.select_parents(population, config.OFFSPRING_SIZE)
+            parents = self.select_parents(population, config.OFFSPRING_SIZE)
             offspring_genotypes = [
                 Genotype.crossover(
                     population.individuals[parent1_i].genotype,
@@ -201,11 +201,15 @@ class ExperimentRunner:
 
             # Make an intermediate offspring population.
             offspring_population = [
-                Individual(genotype, fitness)
+                Individual(genotype=genotype, fitness=fitness)
                 for genotype, fitness in zip(offspring_genotypes, offspring_fitness)
             ]
 
-            population = selector.select_survivors(rng, population, offspring_population,)
+            population = self.select_survivors(
+                rng,
+                population.individuals,
+                offspring_population
+            )
 
             # Make it all into a generation and save it to the database.
             generation = Generation(
